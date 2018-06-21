@@ -12,6 +12,7 @@ import android.support.design.widget.FloatingActionButton
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
+import com.example.spike.myapplication.chart.BarChartActivity
 import com.example.spike.myapplication.contract.MainContract
 
 import com.example.spike.myapplication.databinding.ActivityMainBinding
@@ -81,8 +82,11 @@ class MainActivity : AppCompatActivity(), MainContract {
     override fun onFabClicked(view: View) {
         ui_debug("")
 
-        val fragment = RecyclerViewFragment()
-        replaceFragmentToActivity(fragment, R.id.frame_layout)
+        //val fragment = RecyclerViewFragment()
+        //replaceFragmentToActivity(fragment, R.id.frame_layout)
+
+        val intent = Intent(this, BarChartActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onAdd(item: User) {
